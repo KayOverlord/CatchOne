@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutcomments"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="#FCFCFC"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <ImageView
+        android:id="@+id/imageViewcommcertifi"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteimageButton"
+        app:layout_constraintEnd_toStartOf="@+id/deleteimageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star"
+        android:contentDescription="@string/blueicon" />
+
+    <TextView
+        android:id="@+id/textViewname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/white"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcomments"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewcommcertifi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewcomments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/whiteng"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteimageButton" />
+
+    <ImageButton
+        android:id="@+id/deleteimageButton"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:contentDescription="@string/delete_button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewcomments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete_forever"
+        tools:ignore="NestedWeights" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

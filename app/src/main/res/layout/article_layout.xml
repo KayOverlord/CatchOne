@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteng">
+
+        <ImageView
+            android:id="@+id/imageViewcertification"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:contentDescription="@string/blueicon"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/textViewtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textViewpostname"
+            android:layout_width="0dp"
+            android:layout_height="19dp"
+            android:fontFamily="sans-serif-thin"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewcertification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewpostname" />
+
+        <TextView
+            android:id="@+id/textViewarticle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:background="#FAFAFA"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtitle" />
+
+        <ImageView
+            android:id="@+id/imageViewposter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="@string/click_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/imagebtncomments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewarticle"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <ImageButton
+            android:id="@+id/imagebtncomments"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/button_style"
+            android:contentDescription="@string/comment_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_mode_comment_black_24dp" />
+
+        <TextView
+            android:id="@+id/textViewcommCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imagebtncomments"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/imageButtonbin"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/button_style"
+            android:contentDescription="@string/delete_post"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imagebtncomments"
+            app:layout_constraintTop_toTopOf="@+id/imagebtncomments"
+            app:srcCompat="@drawable/ic_delete_forever" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
